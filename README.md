@@ -12,7 +12,7 @@ Code repository accompanying the JAIR paper:
 
 This system generates logic-based explanations for classical planning problems. Given an agent's planning domain and a human's (possibly incomplete) model of that domain, it identifies the minimal information needed to explain why the agent's plan is correct.
 
-The approach encodes PDDL planning domains into propositional logic using Z3 (SAT/SMT solver), then uses belief-revision–based algorithms to compute explanations as minimal knowledge updates.
+The approach encodes PDDL planning domains into propositional logic using Z3 (SAT/SMT solver), then uses algorithms to compute explanations as minimal knowledge updates.
 
 ## Repository Structure
 
