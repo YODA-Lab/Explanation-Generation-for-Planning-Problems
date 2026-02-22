@@ -106,8 +106,7 @@ def get_vars(f):
 		else:
 			for c in f.children():
 				collect(c)
-
-			collect(f)
+	collect(f)
 	return list(r)
 
 

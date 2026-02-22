@@ -7,7 +7,7 @@ def skeptically_entail(a, b):
     for i in range(len(a)):
         s.reset()
         s.add(Implies(a[i], b))
-        output = String(s.check())
+        output = str(s.check())
         if output != "sat":
             return False
     return True
@@ -18,7 +18,7 @@ def credulously_entail(a, b):
     for i in range(len(a)):
         s.reset()
         s.add(Implies(a[i], b))
-        output = String(s.check())
+        output = str(s.check())
         if output == "sat":
             return True
     return False
@@ -101,12 +101,13 @@ def cost_function(a):
 
 class PriorityQueue:
 
-    queue = [[]]
+    def __init__(self):
+        self.queue = [[]]
 
     def enqueue(self, exp):
         self.queue.append(exp)
         self.queue = sort(self.queue)
-        return self.queue
+        return self
 
     def dequeue(self):
         element = self.queue[0]
